@@ -1,0 +1,488 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.font-weight-semi-bold {
+  font-weight: 600;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-75 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
+
+.mr-50 {
+  margin-right: 0.5rem;
+}
+
+.ml-50 {
+  margin-left: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.section-gap {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.alternate-bg {
+  background-color: rgb(192, 24, 24);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #151316;
+  color: black;
+  line-height: 1.2;
+  font-family: "Montserrat", sans-serif;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: #070606;
+}
+
+ion-icon {
+  font-size: 1rem;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: "Montserrat", sans-serif;
+  color: #000000;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  background-color: #2e4dac;
+  color: white;
+  display: flex;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 20em;
+}
+
+.btn.btn-primary {
+  background-color: #2f2f92;
+  color: #000000;
+}
+.btn.btn-light {
+  background-color: rgb(54, 33, 146);
+  color: #050303;
+}
+.btn.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+.btn.btn-sm.btn-curve {
+  border-radius: 0.25rem;
+}
+
+.btn-hover:hover {
+  background-color: #0a105a;
+  color: rgb(8, 6, 6);
+}
+
+.form-group {
+  margin-bottom: 0.625rem;
+}
+.form-group label {
+  display: block;
+  width: 100%;
+  color: #131416;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.form-radio-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.form-radio-group label {
+  font-size: 0.875rem;
+}
+.form-radio-group > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-radio-group > div label {
+  padding-left: 0.5rem;
+  margin: 0;
+  color: #000000;
+}
+
+.form-control {
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.875rem;
+  background-color: #24222a;
+}
+
+.alternate-bg .form-control {
+  background-color: #1a191f;
+}
+
+@media (min-width: 992px) {
+  .row {
+    display: flex;
+  }
+  .row > div {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .col-7 {
+    flex: 7;
+  }
+
+  .col-5 {
+    flex: 5;
+  }
+
+  .col-6 {
+    flex: 6;
+  }
+}
+
+#edu {
+  border-right: 1px black;
+}
+.toast {
+  min-width: 256px;
+  bottom: 32px;
+  border-radius: 0.25rem;
+  background-color: purple;
+  box-shadow: 0 5px 24px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  padding: 0.75rem 1rem;
+  position: fixed;
+  font-size: 0.875rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.toast.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.5s, fadeOut 0.5s 3.5s;
+  animation: fadeIn 0.5s, fadeOut 0.5s 3.5s;
+}
+.toast.toast-danger {
+  background-color: #9e5e5e;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    bottom: 32px;
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    bottom: 32px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+section .header {
+  margin-bottom: 1.5rem;
+}
+section .header h2 {
+  margin-bottom: 0.5rem;
+}
+section .header p {
+  color: #365da0;
+  font-size: 0.875rem;
+}
+section p {
+  line-height: 1.5;
+  color: #c7cdd8;
+}
+
+section.me {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.me .container {
+  text-align: center;
+}
+section.me img.profile {
+  max-height: 324px;
+  max-width: 324px;
+  border-radius: 0.25rem;
+}
+section.me h1 {
+  margin: 1.5rem auto 1rem auto;
+  font-size: 1.75rem;
+}
+section.me .actions {
+  margin-top: 2.5rem;
+}
+section.me .social-icons {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.me .social-icons .social {
+  height: 42px;
+  width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #374fac;
+  margin: 0 0.5rem;
+}
+section.me .social-icons .social ion-icon {
+  font-size: 1.25rem;
+}
+.date {
+  text-align: left !important;
+}
+.aboutme {
+  color: white;
+}
+
+.table {
+  text-align: left !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  font-weight: 600;
+}
+td {
+  padding: 5px;
+}
+
+.col-color {
+  background-color: #f81a1a !important;
+}
+section.education .education-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+section.education .education-card {
+  flex: 1;
+  width: 800px;
+
+  margin: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 0.25rem;
+  text-align: left;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+section.education .education-card h4 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #0d0d0e;
+}
+section.education .education-card h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+}
+.container h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+}
+
+section.education .education-card h3 {
+  margin: 1rem 0 0.5rem 0;
+}
+section.education .education-card p {
+  font-size: 0.875rem;
+}
+
+section.contact-me form {
+  margin: auto;
+  max-width: 724px;
+  text-align: left;
+}
+.about-section {
+  margin: 0;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-color: black;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.responsive {
+  padding: auto;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+.OnClickOfButton {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.buttonToHome {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  float: right;
+  margin-top: 60px;
+  border: 6px solid RED;
+  background: none;
+  padding: 10px 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  color: red;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+
+.honesty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: red;
+  color: #fff;
+  font-weight: bold;
+}
+
+.honesty p {
+  padding: 0 8%;
+  font-family: merienda;
+}
+
+.honesty h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 0;
+}

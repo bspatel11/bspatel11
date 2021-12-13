@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <style>
+    body{
+      background-color: rgba(86, 206, 243, 0.37);
+    }
+  </style>
+
+  <title>CONTACT ME</title>
+</head>
+
+<body>
+  <div class="container my-4">
+    <h1>Contact Me Form</h1>
+    <p>
+      You can use this form to contact me. My average response time is 1 hour. I will get back to you as soon as
+      possible.
+    </p>
+    <form id="appt-form" action="https://httpbin.org/post" method="POST">
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="fname" class="form-label"><span class="text-danger">*</span> First Name</label>
+          <input class="form-control" type="text" name="fname" id="fname" autocomplete="given-name" autofocus
+            tabindex="1" required>
+        </div>
+        <div class="mb-3 col">
+          <label for="lname" class="form-label"><span class="text-danger">*</span> Last Name</label>
+          <input class="form-control" type="text" name="lname" id="lname" autocomplete="family-name" tabindex="2"
+            required>
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col">
+            <label for="email" class="form-label"><span class="text-danger">*</span> Email Address</label>
+            <input class="form-control" type="email" name="email" id="email" tabindex="4" autocomplete="email" required>
+          </div>
+          <div class="mb-3 col">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input class="form-control" type="tel" name="phone" id="phone" tabindex="5" autocomplete="email">
+            <div class="form-text text-muted">Optional</div>
+            <div class="invalid-feedback">
+              Please input a valid phone number
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3 col">
+            <label for="address" class="form-label"><span class="text-danger">*</span> Street Address</label>
+            <input class="form-control" type="text" name="address" id="address" tabindex="6"
+              autocomplete="street-address" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3 col">
+            <label for="city" class="form-label"><span class="text-danger">*</span> City</label>
+            <input class="form-control" type="text" name="city" id="city" tabindex="7" autocomplete="address-level2"
+              required>
+          </div>
+          <div class="mb-3 col">
+            <label for="province" class="form-label"><span class="text-danger">*</span> Province</label>
+            <select class="form-select" name="province" id="province" autocomplete="address-level1" tabindex="8"
+              required>
+              <option>Alberta</option>
+              <option>British Columbia</option>
+              <option>Ontario</option>
+              <option>Quebec</option>
+              <option>Manitoba</option>
+              <option>New Brunswick</option>
+            </select>
+          </div>
+          <div class="mb-3 col">
+            <label for="postal-code" class="form-label"><span class="text-danger">*</span> Postal Code</label>
+            <input class="form-control" type="text" name="postal-code" id="postal-code" tabindex="9"
+              autocomplete="postal-code" required placeholder="M5W 1E6" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3 col">
+            <label class="form-label me-3"><span class="text-danger">*</span>Purpose of visit:</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="appointment-time" id="appointment-morning"
+                value="morning" tabindex="11" checked>
+              <label class="form-check-label" for="appointment-morning">Question</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="appointment-time" id="appointment-afternoon"
+                value="afternoon" tabindex="12">
+              <label class="form-check-label" for="appointment-afternoon">Comment</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="appointment-time" id="appointment-evening"
+                value="evening" tabindex="13">
+              <label class="form-check-label" for="appointment-evening">Hiring</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3 col">
+            <label for="description" class="form-label"><span class="text-danger">*</span> Description</label>
+            <textarea id="description" name="description" class="form-control" tabindex="14" required
+              rows="10"></textarea>
+          </div>
+        </div>
+        
+        <div class="d-flex flex-row-reverse">
+          <input class="btn btn-primary" type="submit" value="Submit" name="submit" id="submit" tabindex="16">
+          <input class="btn btn-secondary me-2" type="reset" value="Reset" name="reset" id="reset" tabindex="15">
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button style="float:left;"
+          class="buttonToHome"
+          onclick="window.location.href='main.html';"
+        >
+          HOME
+        </button>
+        </div>
+        
+    </form>
+    
+  </div>
+  <br><br><br>
+      
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <script>
+    let form = document.querySelector('#appt-form');
+    let submitBtn = document.querySelector('#submit');
+    let resetBtn = document.querySelector('#reset');
+
+    submitBtn.onclick = (event) => {
+      form.classList.add('was-validated');
+    };
+
+    resetBtn.onclick = (event) => {
+      form.classList.remove('was-validated');
+    };
+
+    form.phone.oninput = (event) => {
+      let phone = form.phone.value;
+      let r = /^((\(\d{3}\))|(\d{3}))\s?\d{3}[\s-]?\d{4}$/;
+      if (r.test(phone)) {
+        form.phone.setCustomValidity('');
+      } else {
+        form.phone.setCustomValidity('Please input a valid phone number.');
+      }
+    };
+
+    form["postal-code"].oninput = (event) => {
+      let postalCode = form['postal-code'].value;
+      let r = /^[A-Za-z]\d[A-Za-z][\s-]?\d[A-Za-z]\d$/;
+      if (r.test(postalCode)) {
+        form['postal-code'].setCustomValidity('');
+      } else {
+        form['postal-code'].setCustomValidity('Please input a valid Canadian postal code.');
+      }
+    };
+
+    const validateUrl = (url) => {
+      if (url === "") {
+        return true;
+      }
+
+      try {
+        let parseUrl = new URL(url);
+        let hostname = parseUrl.hostname;
+
+        return hostname.endsWith('myseneca.ca') ||
+          hostname.endsWith('senecacollege.ca');
+      } catch (err) {
+        console.log('Couldn\'t parse the given url');
+        return false;
+      }
+
+    };
+
+    form.url.oninput = (event) => {
+      if (validateUrl(form.url.value)) {
+        form.url.setCustomValidity('');
+      } else {
+        form.url.setCustomValidity('Please enter a Seneca URL');
+      }
+    };
+
+  </script>
+</body>
+
+</html>
